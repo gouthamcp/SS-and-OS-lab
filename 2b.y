@@ -1,35 +1,20 @@
-{
+%{
 #include<stdio.h>
-#include<string.h>
-#include<ctype.h>
-int valid=0,n=0;
+#include<stdlib.h>
 %}
+%token A B
 %%
-line:
-|line an'b''\n'{
-if(n>=0)valid=1;
-return;
-}
-an:
-|'a'an{n++;}
-;
+input:s'\n' {printf("Successful Grammar\n");exit(0);}
+s: A s1 B| B
+s1: ; | A s1
 %%
-int main()
+main()
 {
-printf("\n enter the string:\n");
+printf("Enter A String\n");
 yyparse();
-if(valid)
-printf("the string is valid and number of a's=%d",n);
-else
-printf("\n the string is invalid and number of a's=%d",n);
 }
-yylex()
+int yyerror()
 {
-int c=getchar();
-return;
-}
-yyerror()
-{
-printf("invalid input\n");
-return;
+printf("Error \n");
+exit(0);
 }
