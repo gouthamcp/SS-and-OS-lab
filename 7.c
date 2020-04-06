@@ -80,7 +80,6 @@ break; // incremented when service time equals 0
 for(i=0;i<n;i++) // to calculate the wait time and turnaround time of each
 {
 wt[i]=tat[i]-bt[i]; // waiting time calculated from the turnaround time - burst
-time
 swt=swt+wt[i]; // summation of wait time
 stat=stat+tat[i]; // summation of turnaround time
 }
@@ -131,7 +130,6 @@ for(i = 1; i <= n; i++)
 for(j = i + 1; j <= n; j++)
 {
 if(process[i].arrival > process[j].arrival) // sort arrival time of a
-process
 {
 temp = process[i];
 process[i] = process[j];
@@ -180,9 +178,8 @@ printf("%5d %8d %7d %8d %10d %9d %10.1f ", process[i].id, process[i].arrival, pr
 tavg=tavg+ process[i].turnaround; //summation of turnaround time
 wavg=wavg+process[i].wait; // summation of waiting time
 printf("\n\n");
-
 }
 tavg=tavg/n; // average turnaround time
 wavg=wavg/n; // average wait time
 printf("tavg=%f\t wavg=%f\n",tavg,wavg); 
-// }// end of srtf
+ }// end of srtf

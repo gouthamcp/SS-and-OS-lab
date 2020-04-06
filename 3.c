@@ -36,30 +36,28 @@ switch(ip[j])
 case'a':col=0;
 if(stack[i]=='$')
 {
-printf("error");
+printf("error\n");
 exit(0);
 }
 break;
 case'b':col=1;
 if(stack[i]=='$')
 {
-printf("error");
+printf("error\n");
 exit(0);
 }
 break;
 case'$':col=2;
 if(stack[i]!='$')
 {
-printf("error");
+printf("error\n");
 exit(0);
 }
 break;
-System Software & Operating Systems Lab – 15CSL67 Gururaj.T,Asso.Prof.,CSE,SJMIT.
-Dept. Of CSE,SJMIT Page 20
 }
 if(m[row][col][0]=='E')
 {
-printf("\nERROR");
+printf("\nERROR\n");
 exit(0);
 }
 else if(m[row][col][0]=='n')
@@ -82,8 +80,8 @@ printf("\n");
 }
 k--;
 if(i<0)
-printf("\nSUCCESS");
+printf("\nSUCCESS\n");
 else
-printf("\nerror");
+printf("\nerror\n");
 return 0;
 }

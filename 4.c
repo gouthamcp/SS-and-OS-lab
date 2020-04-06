@@ -6,7 +6,7 @@ void check();
 int main()
 {
 printf("GRAMMER is E->E+T|T\n T->T*F|F\n F->(E)\n F->id");
-printf("enter input string");
+printf("enter input string\n");
 scanf("%s",a);
 c=strlen(a);
 strcpy(act,"SHIFT->");
